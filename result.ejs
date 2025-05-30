@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shortened URL</title>
+  <link rel="stylesheet" href="/style.css">
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Short URL copied to clipboard!');
+      });
+    }
+
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+
+    window.onload = function() {
+      const theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    };
+  </script>
+</head>
+<body>
+  <div class="toggle-mode">
+    <button onclick="toggleMode()"> Dark Mode</button>
+  </div>
+
+  <div class="container">
+    <h1>Shortened URL</h1>
+
+    <p><strong>Short URL:</strong>
+      <a href="<%= url.shortUrl %>" target="_blank"><%= url.shortUrl %></a>
+      <button class="copy-btn" onclick="copyToClipboard('<%= url.shortUrl %>')">Copy</button>
+    </p>
+
+    <p><strong>Original URL:</strong> <%= url.longUrl %></p>
+    <p><strong>Total Clicks:</strong> <span class="badge"><%= url.clicks %></span></p>
+
+    <a href="/" class="back-link">← Back</a>
+  </div>
+</body>
+</html>

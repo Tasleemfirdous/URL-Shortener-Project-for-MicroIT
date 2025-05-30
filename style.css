@@ -1,0 +1,150 @@
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="url"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+input[type="url"]:focus {
+  border-color: #007BFF;
+}
+
+button {
+  padding: 12px;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: #f9f9f9;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid #007BFF;
+  border-radius: 6px;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.copy-btn {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background: #28a745;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #218838;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #ffc107;
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.toggle-mode {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Dark mode support */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .container {
+  background: #1f1f1f;
+}
+
+.dark-mode input[type="url"] {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.dark-mode input[type="url"]:focus {
+  border-color: #66afe9;
+}
+
+.dark-mode li {
+  background: #2c2c2c;
+  border-left-color: #66afe9;
+}
+
+.dark-mode button {
+  background-color: #66afe9;
+}
+
+.dark-mode .copy-btn {
+  background-color: #28a745;
+}
+
+.dark-mode .copy-btn:hover {
+  background-color: #218838;
+}
+
+.dark-mode a {
+  color: #66afe9;
+}
