@@ -24,10 +24,33 @@ This project is developed as part of my **Micro IT Internship** and demonstrates
 
 # How to Run This Project Locally
 
-## Clone the Repository
+## 1. Clone the Repository
 
-git clone https://github.com/Tasleemfirdous/URL-Shortener-Project-for-MicroIT.git
-cd URL-Shortener-Project-for-MicroIT
+        git clone https://github.com/Tasleemfirdous/URL-Shortener-Project-for-MicroIT.git
+        cd URL-Shortener-Project-for-MicroIT
+
+- `git clone` downloads the project.
+- `cd` navigates into your project folder.
+
+
+## 2. Install Required Packages
+
+    npm install
+      
+## 3. Set up Environment Variables
+Create a .env file in the root folder and add:
+
+    PORT=3000
+    MONGO_URI=mongodb://localhost:27017/urlShortenerDB
+    BASE_URL=http://localhost:3000
+    
+## 4. Start the Server
+
+   npm start
+  
+## 5. Open in Browser
+
+   http://localhost:3000
 
 # Project Status 
-Completed
+  Completed
